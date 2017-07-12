@@ -17,17 +17,17 @@ echo "Coping"
 copy "%TMP%\bibtex4word.aux" %work_dir%
 
 set curr_dir=%cd%
-cd %work_dir%
+cd /d %work_dir%
 echo "Generating"
 ::call %exebibtex% %work_dir%\bibtex4word
 ::call %exebibtex% %work_dir%\bibtex4word
 call %exebibtex% bibtex4word
-cd %curr_dir%
+cd /d %curr_dir%
 
 echo "Sedding"
-subs.vbs "%work_dir%\bibtex4word.bbl" "%work_dir%\bibtex4word_sed.bbl"
+"%script_dir%\subs.vbs" %work_dir%\bibtex4word.bbl %work_dir%\bibtex4word_sed.bbl
 
 echo "Moving"
-copy "%work_dir%\bibtex4word_sed.bbl" "%TMP%\bibtex4word.bbl"
+copy %work_dir%\bibtex4word_sed.bbl %TMP%\bibtex4word.bbl
 
 ENDLOCAL
