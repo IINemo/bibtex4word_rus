@@ -9,4 +9,4 @@ Use gost2008/l as a bibtex style for the best experience.
 
 This works for Windows 10 and presumably for Windows 7 and 8.
 
-MikTex package is required.
+[MikTex]: https://miktex.org/download package is required.
