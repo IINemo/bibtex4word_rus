@@ -13,7 +13,7 @@ inputFile.Close
 Set subs = CreateObject("Scripting.Dictionary")
 subs.Add "\selectlanguageifdefined{english}", "\selectlanguageifdefined{}"
 subs.Add "\selectlanguageifdefined{russian}", "\selectlanguageifdefined{}"
-subs.Add "\cyr\\textnumero", "¹"
+subs.Add "\cyr\textnumero", "¹"
 subs.Add "\BibDash", "—"
 subs.Add "\CYRSH", "Ø"
 subs.Add "\cyrsh", "ø"
